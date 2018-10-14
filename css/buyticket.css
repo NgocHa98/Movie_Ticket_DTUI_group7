@@ -1,0 +1,354 @@
+ul {
+  padding: 0;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: #5bc199 !important;
+  text-decoration: none !important;
+}
+.navbar-default .navbar-nav>li>a {
+  color: #fff !important;
+}
+.navbar {
+  background-color: #1f2533 !important;
+  margin-bottom: -1px !important;
+  width: 100%;
+  border: none;
+}
+#logo {
+  background-image:url(../img/Logo2.png);
+  display:block;
+  background-size: 60px 66px;
+  background-repeat: no-repeat;
+}
+.showtime-filters {
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 20px;
+}
+.date-container {
+  position: absolute;
+  overflow: hidden;
+  transition: width .3s ease;
+  z-index: 100;
+  height: 47px;
+  width: 55%;
+}
+.date-container ul {
+  overflow: hidden;
+  /*padding: 5px 15px 5px 0;*/
+  transition: margin-left .3s ease;
+  background: #fff;
+  width: auto;
+  height: 50px;
+  position: relative;
+}
+.showtime-filters .date-container ul li._active {
+  background: #49ba8e;
+  border-color: #49ba8e;
+  border-radius: 8px;
+}
+.showtime-filters .date-container ul li {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  float: left;
+  padding: 5px 0;
+  font-size: 12px;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none !important;
+}
+.date-container ul li._active div {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.showtime-filters .date-container ul li._active div span {
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  float: left;
+}
+.showtime-filters .date-container ul li._slick {
+  position: absolute;
+}
+.dropdown-block {
+  zoom: 1;
+  float: right;
+  padding-right: 34px;
+  max-width: 80%;
+}
+.dropdown.highlighted {
+  box-shadow: inset 0 -3px 0 0 #49ba8e;
+}
+.dropdown {
+  position: relative;
+  float: left;
+  padding: 15px;
+  border-left: 1px solid #eceef1;
+  top: 0;
+  display: inline-block;
+  outline: 0;
+  text-align: left;
+  transition: all .5s ease;
+  font-size: 12px;
+}
+.dropdown .__text._highlighted {
+    color: #49ba8e;
+}
+.__text {
+  padding-right: 8px;
+}
+._languages-text {
+  width: 8em;
+}
+.dropdown .__icon {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+}
+.dropdown .__menu {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  outline: 0;
+  top: 100%;
+  left: -1px;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  min-width: 101.5%;
+  white-space: nowrap;
+  text-shadow: none;
+  color: #333;
+  text-align: left;
+  box-shadow: 0 2px 4px 0 rgba(39,41,43,.15);
+  border: 1px solid rgba(39,41,43,.15);
+  border-radius: 0 0 .2857rem .2857rem;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  z-index: 100;
+}
+.__menu li {
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  position: relative;
+}
+.dropdown._active .__menu {
+  opacity: 1;
+  visibility: visible!important;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0)
+}
+.dropdown._active .__icon {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
+.clear {
+  clear: both;
+}
+
+/*con tiep phia tren*/
+
+
+/*list item*/
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: 400;
+  vertical-align: baseline;
+  background: 0 0;
+}
+.film-content {
+  background: #f2f2f2;
+  padding: 0 15px;
+  padding-top: 15px;
+}
+.content {
+  zoom: 1;
+  background: #fff;
+  padding: 0 0 15px;
+  position: relative;
+  min-height: 350px;
+}
+ul .list {
+  zoom: 1;
+  border-bottom: 1px solid #eff1f3;
+  padding: 13px 20px;
+}
+.list .listing-info {
+  width: 40%;
+  font-size: 10px;
+  color: #999;
+}
+ul .list > div {
+  float: left;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 400;
+}
+ul .list .listing-info .details {
+  float: left;
+  margin-top: 5px;
+  padding-left: 5px;
+  display: table;
+  width: 100%;
+}
+.details .heart-it {
+  display: table-cell;
+  vertical-align: top;
+  width: 17px;
+  height: 17px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+ul .list .listing-info .details .__name{
+  display: table-cell;
+  vertical-align: top;
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 20px;
+  position: relative;
+  width: 50%
+}
+ul .list .listing-info .details .__name a {
+  font-weight: 700;
+  color: #333;
+  float: left;
+}
+label {
+  margin-left: 12px;
+}
+span.__tick {
+  border: 1px solid #b9b9ba;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  padding-right: 10px;
+}
+strong {
+  font-weight: 700;
+}
+.unpaid-momo-wrapper {
+  margin-top: 10px;
+  float: left;
+  width: 100%;
+}
+
+.icon {
+  display: inline-block;
+  width: 22px;
+  height: 20px;
+}
+.__momo-info {
+  float: left;
+  margin: 5px 15px 0 -4px;
+}
+.__momo-info label {
+  color: #49ba8e;
+}
+.__fnb-info {
+  float: left;
+  margin: 5px 15px 0 -4px;
+}
+.__fnb-info label {
+  color: #ffa426;
+}
+.body_time {
+  padding-top: 5px;
+  zoom: 1;
+  width: 60%;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+.body_time>div a {
+  display: inline-block;
+  color: #06f;
+  font-weight: 700;
+  position: relative;
+  cursor: pointer;
+}
+ul .list>div {
+    float: left;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 400;
+}
+.__showtime-link {
+  padding-left: 20px;
+}
+._disable {
+  color: #999 !important;
+  font-weight: 400;
+}
+/*responsive*/
+@media only screen and (max-width: 700px) {
+  .date-container {
+    width: 100%;
+    right: 0;
+    left: 0;
+  }
+  li.list {
+    padding: 0;
+  }
+  ul .list .listing-info .details .__name {
+    padding: 0;
+    width: 100%;
+  }
+  .list .listing-info {
+    width: 65%;
+  }
+  .body_time {
+    width: 35%;
+  }
+  .__momo-info {
+    margin: 0;
+  }
+  .__fnb-info {
+    margin: 0;
+  }
+  .film-content {
+    padding: 0;
+    padding-top: 5px
+  }
+}
+@media (min-width: 700px) and (max-width: 1100px) {
+  .listing-info {
+    width: 60%;
+  }
+  .body_time {
+    width: 38%;
+  }
+  .__momo-info {
+    margin: 0 auto;
+  }
+  .__fnb-info {
+    margin: 0 auto;
+  }
+  .__name {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,439 @@
+<html>
+<head>
+  <title>Mua vé</title>
+  <link rel="stylesheet" type="text/css" href="css/buyticket.css" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" >
+  <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <link href="font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" style="width:60px;" id="logo" href="index.html"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse main-nav">
+          <ul class="nav navbar-nav">
+            <li><a href="#about">Phim</a></li>
+            <li><a href="#contact">Lịch chiếu</a></li>
+            <li><a href="#">Giới Thiệu</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#0" class="cd-signin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="#0" class="cd-signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="showtime-filters">
+    <div class="date-container ">
+      <ul id="showDates">
+        <li class="_active _slick" style="left: 0px;">
+          <a href="#">
+            <span></span>
+            <div>07<br>
+              <span>T .bảy</span>
+            </div>
+          </a>
+        </li>
+        <li class="_slick" style="left: 67px;">
+          <a href="#">
+            <span></span>
+            <div>08<br>
+              <span>C.nhật</span>
+            </div>
+          </a>
+        </li>
+        <li class="_slick" style="left: 121px;">
+          <a href="#">
+            <span></span>
+            <div>09<br>
+              <span>T.hai</span>
+            </div>
+          </a>
+        </li>
+        <li class="_slick" style="left: 173px;">
+          <a href="#">
+            <span></span>
+            <div>10<br>
+              <span>T.ba</span>
+            </div>
+          </a>
+        </li>
+        <li class="_slick" style="left: 230px;">
+          <a href="#">
+            <span></span>
+            <div>11<br>
+              <span>T.tư</span>
+            </div>
+          </a>
+        </li>
+        <li class="_slick" style="left: 279px;">
+          <a href="#">
+            <span></span>
+            <div>12<br>
+              <span>T.năm</span>
+            </div>
+          </a>
+        </li>
+        <li class="_slick" style="left: 334px;">
+          <a href="#">
+            <span></span>
+            <div>13<br>
+              <span>T.sáu</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-block ">
+      <div class="dropdown highlighted">
+        <div class="__text _languages-text _highlighted">Cinema - 2D</div>
+      </div>
+
+
+      <div class="dropdown filter price">
+        <div class="__text _prices-text">Lọc khoảng giá</div>
+        <i class="__icon icon-arrow-down range">
+          <img src="img/arrow_down.png">
+        </i>
+        <ul class="__menu" id="filterPrice">
+          <li class="prices">
+            <label>
+
+              70.000-100.000
+            </label>
+            <div class="mini-loader">
+              <div class="mini"></div>
+            </div>
+          </li>
+          <li class="prices">
+            <label>
+
+              101.000-200.000
+            </label>
+            <div class="mini-loader">
+              <div class="mini"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    <div class="dropdown filter time">
+      <div class="__text _prices-text">Lọc thời gian</div>
+      <i class="__icon icon-arrow-down timing">
+        <img src="img/arrow_down.png">
+      </i>
+      <ul class="__menu" id="">
+        <li class="">
+          <label>
+
+            <small class="__count"><span>12:00-11:59 AM</span></small>
+          </label>
+            <div class="mini-loader">
+              <div class="mini"></div>
+            </div>
+          </li>
+          <li>
+            <label>
+
+              <small class="__count"><span>12:00-3:59 PM</span></small>
+            </label>
+              <div class="mini-loader">
+                <div class="mini"></div>
+              </div>
+            </li>
+            <li class="">
+              <label>
+
+                <small class="__count"><span>4:00-6:59 PM</span></small>
+              </label>
+                <div class="mini-loader">
+                  <div class="mini"></div>
+                </div>
+              </li>
+              <li class="">
+                <label>
+                  <small class="__count"><span>7:00-11:59 PM</span></small>
+                </label>
+                  <div class="mini-loader">
+                    <div class="mini"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        <div class="clear"></div>
+   </div>
+  <div class="film-content">
+        <div class="content">
+          <ul>
+            <li class="list">
+              <div class="listing-info">
+                <div class="details">
+                  <span class="heart-it">
+                    <div class="fa fa-heart fa-2x" style="color:#c9363c;"></div>
+                  </span>
+                  <div class="__name ">
+                    <a class="__venue-name" >Capital Cinemas: Rạp cầu giấy</a>
+                    <div class="unpaid-momo-wrapper">
+
+                      <div class="__momo-info">
+                        <span class="icon">
+                          <img src="img/smartphone.png">
+                        </span>
+                        <label>Momo</label>
+
+                      </div>
+                      <div class="__fnb-info">
+                        <span class="icon">
+                          <img src="img/drink.png">
+                        </span>
+                        <label>Pepsi</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="__facilities">
+                  </div>
+                </div>
+              </div>
+              <div class="body_time">
+                <div class="">
+                  <a class="__showtime-link" href="seat.html">
+                    10:35 AM
+                  </a>
+                  <a class="__showtime-link ">
+                    12:35 AM
+                  </a>
+                </div>
+
+                </div>
+              </li>
+              <li class="list">
+              <div class="listing-info">
+                <div class="details">
+                  <span class="heart-it">
+                    <div class="fa fa-heart fa-2x" style="color:#c9363c;"></div>
+                  </span>
+                  <div class="__name ">
+                    <a class="__venue-name" >Galaxy Cinemas: Rạp Q.Hoàn Kiếm</a>
+                    <div class="unpaid-momo-wrapper">
+
+                      <div class="__momo-info">
+                        <span class="icon">
+                          <img src="img/smartphone.png">
+                        </span>
+                        <label>Momo</label>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="__facilities">
+                  </div>
+                </div>
+              </div>
+              <div class="body_time">
+                <div class="">
+                  <a class="__showtime-link _disable">
+                    10:35 AM
+                  </a>
+                  <a class="__showtime-link">
+                    14:05 PM
+                  </a>
+                </div>
+
+              </div>
+              </li>
+              <li class="list">
+              <div class="listing-info">
+                <div class="details">
+                  <span class="heart-it">
+                    <div class="fa fa-heart fa-2x" style="color:#c9363c;"></div>
+                  </span>
+                  <div class="__name ">
+                    <a class="__venue-name" >3D Cinemas: Rạp Hà Đông</a>
+                    <div class="unpaid-momo-wrapper">
+
+                      <div class="__momo-info">
+                        <span class="icon">
+                          <img src="img/smartphone.png">
+                        </span>
+                        <label>Momo</label>
+
+                      </div>
+                      <div class="__fnb-info">
+                        <span class="icon">
+                          <img src="img/drink.png">
+                        </span>
+                        <label>Pepsi</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="__facilities">
+                  </div>
+                </div>
+              </div>
+              <div class="body_time">
+                <div class="">
+                  <a class="__showtime-link ">
+                    2:35 PM
+                  </a>
+                  <a class="__showtime-link _disable">
+                    4:35 PM
+                  </a>
+                </div>
+
+                </div>
+              </li>
+              <li class="list">
+              <div class="listing-info">
+                <div class="details">
+                  <span class="heart-it">
+                    <div class="fa fa-heart fa-2x" style="color:#c9363c;"></div>
+                  </span>
+                  <div class="__name ">
+                    <a class="__venue-name" >Cinemas: Rạp Thanh xuân</a>
+                    <div class="unpaid-momo-wrapper">
+
+                      <div class="__momo-info">
+                        <span class="icon">
+                          <img src="img/smartphone.png">
+                        </span>
+                        <label>Momo</label>
+
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="__facilities">
+                  </div>
+                </div>
+              </div>
+              <div class="body_time">
+                <div class="">
+                  <a class="__showtime-link _disable">
+                    10:35 PM
+                  </a></div>
+
+                </div>
+              </li>
+              <li class="list">
+              <div class="listing-info">
+                <div class="details">
+                  <span class="heart-it">
+                    <div class="fa fa-heart fa-2x" style="color:#c9363c;"></div>
+                  </span>
+                  <div class="__name ">
+                    <a class="__venue-name">Cinemas: Rạp Long Biên</a>
+                    <div class="unpaid-momo-wrapper">
+
+                      <div class="__momo-info">
+                        <span class="icon">
+                          <img src="img/smartphone.png">
+                        </span>
+                        <label>Momo</label>
+
+                      </div>
+                      <div class="__fnb-info">
+                        <span class="icon">
+                          <img src="img/drink.png">
+                        </span>
+                        <label>Pepsi</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="__facilities">
+                  </div>
+                </div>
+              </div>
+              <div class="body_time">
+                <div class="">
+                  <a class="__showtime-link _disable">
+                    10:35 PM
+                  </a></div>
+
+                </div>
+              </li>
+              <li class="list">
+              <div class="listing-info">
+                <div class="details">
+                  <span class="heart-it">
+                    <div class="fa fa-heart fa-2x" style="color:#c9363c;"></div>
+                  </span>
+                  <div class="__name ">
+                    <a class="__venue-name" >Cinemas: Rạp Hai Bà Trưng</a>
+                    <div class="unpaid-momo-wrapper">
+
+                      <div class="__momo-info">
+                        <span class="icon">
+                          <img src="img/smartphone.png">
+                        </span>
+                        <label>Momo</label>
+
+                      </div>
+                      <div class="__fnb-info">
+                        <span class="icon">
+                          <img src="img/drink.png">
+                        </span>
+                        <label>Pepsi</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="__facilities">
+                  </div>
+                </div>
+              </div>
+              <div class="body_time">
+                <div class="">
+                  <a class="__showtime-link _disable">
+                    10:35 PM
+                  </a>
+                </div>
+
+                </div>
+              </li>
+          </ul>
+        </div>
+      </div>
+</body>
+<script type="text/javascript">
+  var isopen1 = false, isopen2 = false;
+  $(".range").on('click', function(){
+    if(isopen1 == false) {
+      $(".price").addClass("_active");
+      isopen1 = true;
+    }
+    else {
+      $(".price").removeClass("_active");
+      isopen1 = false;
+    }
+  });
+
+  $(".timing").on('click', function(){
+    if(isopen2 == false) {
+      $(".time").addClass("_active");
+      isopen2 = true;
+    }
+    else {
+      $(".time").removeClass("_active");
+      isopen2 = false;
+    }
+  });
+
+  $(document).ready(function(){
+    var h_list = $(".listing-info").height() + 26;
+    $(".list").css({'height': h_list + "px"});
+  });
+</script>
+</html>

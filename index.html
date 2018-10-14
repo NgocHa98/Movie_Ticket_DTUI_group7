@@ -1,0 +1,709 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/login-signup.css">
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+    <link rel="stylesheet" type="text/css" href="css/offer/home.css">
+    <style type="text/css">
+      .jssorb05 {
+        position: absolute;
+      }
+      .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+        position: absolute;
+
+        width: 16px;
+        height: 16px;
+        background: url('img/b05.png') no-repeat;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .jssorb05 div { background-position: -7px -7px; }
+      .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+      .jssorb05 .av { background-position: -67px -7px; }
+      .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+
+      .jssora22l, .jssora22r {
+        display: block;
+        position: absolute;
+
+        width: 40px;
+        height: 58px;
+        cursor: pointer;
+        background: url('img/a22.png') center center no-repeat;
+        overflow: hidden;
+      }
+      .jssora22l { background-position: -10px -31px; }
+      .jssora22r { background-position: -70px -31px; }
+      .jssora22l:hover { background-position: -130px -31px; }
+      .jssora22r:hover { background-position: -190px -31px; }
+      .jssora22l.jssora22ldn { background-position: -250px -31px; }
+      .jssora22r.jssora22rdn { background-position: -310px -31px; }
+
+    .red-bar {
+      width: 30px;
+      height: 2px;
+      background: #c80910;
+      margin: 20px auto 0;
+      margin-bottom: 20px;
+    }
+    .ad-content {
+      clear: left;
+      max-width: 1400px;
+      width: 100%;
+      background-color: #f4f4f4;
+      max-height: 200px;
+    }
+    </style>
+    <title>Đặt vé xem phim</title>
+  </head>
+  <body style="padding:0px; margin-top:50px; background-color:#fff;font-family:Arial, sans-serif">
+
+
+  <!-- header -->
+  <header>
+    <nav class="navbar navbar-default header-bar-fixed ">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+          <a class="navbar-brand" style="width:60px;" id="logo" href="index.html"></a>
+        </div>
+        <div class=" narbar-right" id="header-search">
+            <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="q">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse main-nav">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Phim</a></li>
+            <li><a href="new.html">Lịch chiếu</a></li>
+            <li><a href="introduc.html">Giới Thiệu</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right" id="login-form">
+            <li><a href="#0" class="cd-signin"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
+            <li><a href="#0" class="cd-signup"><span class="glyphicon glyphicon-user"></span> Đăng ký</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+  <div class="hidden" style="clear: both"></div>
+
+<!-- trang login bi an di -->
+
+<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+    <div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+      <ul class="cd-switcher">
+        <li><a href="#">Đăng nhập</a></li>
+        <li><a href="#">Đăng ký</a></li>
+      </ul>
+      <div style="width: 0 ; height: 0; clear: both;"></div>
+      <div id="cd-login"> <!-- log in form -->
+        <form class="cd-form">
+          <p class="fieldset">
+            <label class="image-replace cd-email" for="signin-email">E-mail</label>
+            <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+            <span class="cd-error-message">Lỗi email!</span>
+          </p>
+
+          <p class="fieldset">
+            <label class="image-replace cd-password" for="signin-password">Mật khẩu</label>
+            <input class="full-width has-padding has-border" id="signin-password" type="password"  placeholder="Password">
+            <a href="#0" class="hide-password">Show</a>
+            <span class="cd-error-message">có lỗi mật khẩu!</span>
+          </p>
+
+          <p class="fieldset">
+            <input type="checkbox" id="remember-me" checked>
+            <label for="remember-me">Nhớ tài khoản</label>
+          </p>
+
+          <p class="fieldset">
+            <input class="full-width" type="submit" value="Đăng nhập">
+          </p>
+        </form>
+
+        <p class="cd-form-bottom-message"><a href="#0">Quên mật khẩu?</a></p>
+        <!-- <a href="#0" class="cd-close-form">Close</a> -->
+      </div> <!-- cd-login -->
+
+      <div id="cd-signup"> <!-- sign up form -->
+        <form class="cd-form">
+          <p class="fieldset">
+            <label class="image-replace cd-username" for="signup-username">Tên đăng nhập</label>
+            <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
+            <span class="cd-error-message">Lỗi tên đăng nhập!</span>
+          </p>
+
+          <p class="fieldset">
+            <label class="image-replace cd-email" for="signup-email">E-mail</label>
+            <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+            <span class="cd-error-message">Lỗi email!</span>
+          </p>
+
+          <p class="fieldset">
+            <label class="image-replace cd-password" for="signup-password">Mật khẩu</label>
+            <input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Password">
+            <a href="#0" class="hide-password">Show</a>
+            <span class="cd-error-message">có lỗi mật khẩu!</span>
+          </p>
+
+          <p class="fieldset">
+            <input type="checkbox" id="accept-terms">
+            <label for="accept-terms">Tôi đồng ý với điều khoản của <a href="#0">Block Buster</a></label>
+          </p>
+
+          <p class="fieldset">
+            <input class="full-width has-padding" type="submit" value="Tạo tài khoản">
+          </p>
+        </form>
+
+        <!-- <a href="#0" class="cd-close-form">Close</a> -->
+      </div> <!-- cd-signup -->
+
+      <div id="cd-reset-password"> <!-- reset password form -->
+        <p class="cd-form-message">Quên mật khẩu? Hãy truy cập email. Bạn sẽ có link để có mật khẩu mới!.</p>
+
+        <form class="cd-form">
+          <p class="fieldset">
+            <label class="image-replace cd-email" for="reset-email">E-mail</label>
+            <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+            <span class="cd-error-message">Lỗi email!</span>
+          </p>
+
+          <p class="fieldset">
+            <input class="full-width has-padding" type="submit" value="Reset password">
+          </p>
+        </form>
+
+        <p class="cd-form-bottom-message"><a href="#0">Quay trở lại đăng nhập</a></p>
+      </div> <!-- cd-reset-password -->
+      <a href="#0" class="cd-close-form">Đóng</a>
+    </div> <!-- cd-user-modal-container -->
+</div> <!-- cd-user-modal -->
+
+
+
+
+<div style="position: relative; display: block; width: 100%;">
+  <!-- slide use library-->
+
+  <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1600px; height: 500px; overflow: hidden; visibility: hidden;">
+    <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1600px; height: 500px; overflow: hidden;">
+      <div data-p="225.00" style="display: none;">
+        <img data-u="image" src="img/1.jpg" />
+      </div>
+      <div data-p="225.00" style="display: none;">
+        <img data-u="image" src="img/2.jpg" />
+      </div>
+      <div data-p="225.00" data-po="80% 55%" style="display: none;">
+        <img data-u="image" src="img/3.jpg" />
+      </div>
+      <div data-p="225.00" data-po="80% 55%" style="display: none;">
+        <img data-u="image" src="img/4.jpg" />
+      </div>
+    </div>
+    <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+
+      <div data-u="prototype" style="width:16px;height:16px;"></div>
+    </div>
+
+    <span data-u="arrowleft" class="jssora22l" style="top:0px;left:12px;width:40px;height:58px;" data-autocenter="2"></span>
+    <span data-u="arrowright" class="jssora22r" style="top:0px;right:12px;width:40px;height:58px;" data-autocenter="2"></span>
+  </div>
+
+  <!-- search -->
+<!-- <div style="position: relative; display: block; width: 100%; height: 20px;"></div> -->
+<div class="search-container">
+    <dropdown>
+      <input id="toggle2" type="checkbox">
+      <label for="toggle2" class="animate">Tất cả</label>
+      <ul class="animate">
+        <li class="animate">Phim</li>
+        <li class="animate">Sự kiện</li>
+        <li class="animate">Blogs</li>
+      </ul>
+    </dropdown>
+    <div class="input-group ">
+      <input type="text" class="form-control search-view" name="x" placeholder="Tìm kiếm phim...">
+      <span class="input-group-btn search-view" >
+        <button class="btn btn-success search-view" type="button"><span class="glyphicon glyphicon-search"></span></button>
+      </span>
+    </div>
+</div>
+<div class="hidden" style="clear: both"></div>
+
+</div>
+
+<div class="space"></div>
+
+<h1 style="font-size:18px;font-weight:400;color:#2c3946;text-align:center;letter-spacing:2px;  ">
+    COMING SOON
+</h1>
+<div class="red-bar"></div>
+
+<!-- danh sach film -->
+
+<div class="space"></div>
+<div class="extra-container" >
+    <ul class="grid cs-style-3">
+        <li>
+            <figure>
+                <div class="item hovereffect">
+                    <img  src="img/240x355/ds.jpg" class="Img">
+                    <h4>Doctor Strange</h4>
+                    <img src="img/imdb_icon.png" class="icon"> 7/10</img>
+                </div>
+                <figcaption>
+                    <a href="res/video/doctor.mp4" class="html5lightbox" >Trailer</a>
+                    <a href="DoctorStrange.html" id="hr">Thông tin</a>
+                </figcaption>
+            </figure>
+        </li>
+        <li>
+            <figure>
+                <div class="item hovereffect">
+                    <img  src="img/240x355/chg.jpg" class="Img">
+                    <h4>Cô hầu gái</h4>
+                    <img src="img/imdb_icon.png" class="icon"> 7/10</img>
+                </div>
+                <figcaption>
+                    <a href="res/video/chg.mp4" class="html5lightbox">Trailer</a>
+                    <a href="#" id="hr">Thông tin</a>
+                </figcaption>
+            </figure>
+        </li>
+        <li>
+            <figure>
+                <div class="item hovereffect">
+                    <img  src="img/240x355/mo.jpg" class="Img">
+                    <h4>Moana</h4>
+                    <img src="img/imdb_icon.png" class="icon"> 7/10</img>
+                </div>
+                <figcaption>
+                    <a href="res/video/moana.mp4" class="html5lightbox">Trailer</a>
+                    <a href="#" id="hr">Thông tin</a>
+                </figcaption>
+            </figure>
+        </li>
+        <li>
+            <figure>
+                <div class="item hovereffect">
+                    <img  src="img/240x355/su.jpg" class="Img">
+                    <h4>Cơ Trưởng Sully</h4>
+                    <img src="img/imdb_icon.png" class="icon"> 7/10</img>
+                </div>
+                <figcaption>
+                    <a href="res/video/sully.mp4" class="html5lightbox">Trailer</a>
+                    <a href="#" id="hr">Thông tin</a>
+                </figcaption>
+            </figure>
+        </li>
+        <li>
+            <figure>
+                <div class="item hovereffect">
+                    <img  src="img/240x355/jbb.jpg" class="Img">
+                    <h4>Nhóc Tỳ Của cô Jones</h4>
+                    <img src="img/imdb_icon.png" class="icon"> 7/10</img>
+                </div>
+                <figcaption>
+                    <a href="res/video/jone.mp4" class="html5lightbox">Trailer</a>
+                    <a href="#" id="hr">Thông tin</a>
+                </figcaption>
+            </figure>
+        </li>
+        <li>
+            <figure>
+                <div class="item hovereffect">
+                    <img  src="img/240x355/stk.jpg" class="Img">
+                    <h4>Tiểu Đội Cò Bay</h4>
+                    <img src="img/imdb_icon.png" class="icon"> 7/10</img>
+                </div>
+                <figcaption>
+                    <a href="res/video/storks.mp4" class="html5lightbox">Trailer</a>
+                    <a href="#" id="hr">Thông tin</a>
+                </figcaption>
+            </figure>
+        </li>
+    </ul>
+</div>
+<!-- xoa float -->
+<br class="spacer"/>
+
+
+
+
+
+<!-- trang quan ly xu kien -->
+<h1 style="font-size:18px;font-weight:400;color:#2c3946;text-align:center;letter-spacing:2px; ">
+  Sự kiện</h1>
+  <div class="red-bar"></div>
+
+
+<section>
+    <section>
+        <div class="main">
+            <ul class="list">
+                <li>
+                    <a class="imgevent" href="#">
+                    <img src="img/events/phongchieudacbiet.jpg" width="100" height="100"/>
+                    </a>
+                    <div class="Infoclick">
+                        <h4 class="title">
+                            <a href="#">ƯU ĐÃI THỨ BA CHO PHÒNG CHIẾU ĐẶC BIỆT</a>
+                        </h4>
+                        <p>Áp dụng từ 2/8/2016 đến hết ngày 20/12/2016.
+                            Áp dụng tại tất cả các rạp có phòng chiếu đặc biệt.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <a class="imgevent">
+                    <img src="img/events/consotve.jpg" width="100" height="100"/>
+                    </a>
+                    <div class="Infoclick">
+                        <h4 class="title">
+                            <a href="#"> Cơn Sốt Vé</a>
+                        </h4>
+                        <p>Áp dụng tại các rạp.
+                            Thời gian đến hết 30/9/2016
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <a class="imgevent" href="#">
+                    <img src="img/events/danang.jpg" width="100" height="100" />
+                    </a>
+                    <div class="Infoclick">
+                        <h4 class="title">
+                            <a href="#">Chào Đà Nẵng,đã đến cùng 5000 vé xem phim miễn phí</a>
+                        </h4>
+                        <p> Cinema tưng bừng khai trương cụm rạp mới tại Đà Nẵng! Nhân dịp này, hân hạnh đồng hành mang đến bạn vô vàn vé xem phim miễn phí.</p>
+                    </div>
+                </li>
+                <li>
+                    <a class="imgevent" href="#">
+                    <img src="img/events/thanhvien.jpg" width="100" height="100"/>
+                    </a>
+                    <div class="Infoclick">
+                        <h4 class="title">
+                            <a href="#">Đăng Ký Thành Viên – Nhận Ngay Ưu Đãi</a>
+                        </h4>
+                        <p>Thời gian: 23.09 đến 02.10.2016.
+                            Áp dụng tại Đà Nẵng
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</section>
+
+
+
+<!-- offer -->
+<div style=" opacity: 1">
+<section class="marketing-adspot section-bg">
+  <div class="adspot-content">
+      <div class="col" style="visibility: visible; animation-delay: 0.1s; animation-name: ;">
+          <div class="section-head " style="visibility: visible;">
+              Quà tặng
+              <div class="__red-bar"></div>
+          </div>
+          <div class="__image">
+            <span class="icon">
+              <img style="width:50px;height:50px;"src="img/logo/giftbox-with-hearts.svg">
+            </span>
+          </div>
+          <div class="__text">Với thẻ quà tặng, bạn có thể món quà bạn bè &amp; phim gia đình &amp; vé vui chơi, buổi hòa nhạc, bất kể nó là yêu cho ngày sinh nhật, ngày kỷ niệm hoặc chỉ đơn giản là không có lý do khác hơn là làm thế nào để bạn cảm thấy về họ.
+          </div>
+          <div class="align-center">
+              <div>
+                  <a class="btn _dos" href="#">MUA THẺ QUÀ TẶNG</a>
+              </div>
+          </div>
+      </div>
+      <div class="col" style="visibility: visible; animation-delay: 0.1s; animation-name: ;">
+          <div class="section-head">
+              KHUYẾN MÃI
+              <div class="__red-bar"></div>
+          </div>
+          <div class="__image">
+            <span class="icon">
+              <img src="img/logo/icon-offer.svg">
+            </span>
+          </div>
+          <div class="__text">Khuyến hoặc giảm giá cho bạn về sau, đó là món hời không thể bỏ qua đối với mỗi người trong các bạn.
+          </div>
+          <div class="align-center">
+              <div>
+                  <a href="#" class="btn _dos">XEM KHUYẾN MÃI</a>
+              </div>
+          </div>
+      </div>
+      <div class="col" style="visibility: visible; animation-delay: 0.1s; animation-name: ;">
+          <div class="section-head">
+              Mobile app
+              <div class="__red-bar"></div>
+          </div>
+          <div class="__image">
+            <span class="icon">
+              <img src="img/logo/icon-mobile.svg">
+            </span>
+          </div>
+          <div class="__text">Đặt vé của bạn trên đường đi, chỉ với một vài cú nhấp chuột. Chọn từ một con số khổng lồ 1.000 + màn hình rạp chiếu phim trên khắp Việt Nam và đặt muộn nhất là 20 phút trước khi phim được tiến hành chiếu trên rạp theo kế hoạch đã định.
+          </div>
+          <div class="align-center">
+              <div>
+                  <a href="#" class="btn _dos">Tải xuống</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+</div>
+
+<br class="spacer">
+<!--blog -->
+
+<h1 style="font-size:18px;font-weight:400;color:#2c3946;text-align:center;letter-spacing:2px;  ">
+    BLOG
+</h1>
+<div class="red-bar"></div>
+<br class="spacer"  />
+<div class="blog" >
+    <div class="card">
+        <a href="BLog.html">
+        <img src="img/blog1.jpg" alt="Avatar" style="width:100%">
+        <a/>
+        <div class="v-align">
+            <div class="v-align-middle">
+                <h3 class="title">Star Trex review</h3>
+                <h5 class="date"><span>June 23, 2016</span> | <span>4 Comments</span></h5>
+                <p>Với thời lượng hơn 120 phút, Star Trek Beyond thực sự đã chiêu đãi khán giả một “bữa tiệc” vô cùng thịnh soạn với kỹ xảo hình ảnh xuất sắc, âm thanh chấn...</p>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <img src="img/blog2.jpg" alt="Avatar" style="width:100%">
+        <div class="v-align">
+            <div class="v-align-middle">
+                <h3 class="title">Phim Người Nhện mới</h3>
+                <h5 class="date"><span>June 23, 2016</span> | <span>4 Comments</span></h5>
+                <p>Tại sự kiện CinemaCon 2016 đang diễn ra ở Las Vegas, Mỹ, hãng Sony thông báo bộ phim Người Nhện mới sẽ mang tên Spider-Man:...</p>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <img src="img/blog3.jpg" alt="Avatar" style="width:100%">
+        <div class="v-align">
+            <div class="v-align-middle">
+                <h3 class="title">‘Wonder Woman’ sẽ ra rạp sớm </h3>
+                <h5 class="date"><span>June 23, 2016</span> | <span>4 Comments</span></h5>
+                <p>Bom tấn siêu anh hùng của DC và Warner Bros. sẽ khởi chiếu từ 2/6/2017, tức sớm hơn kế hoạch ban đầu ba tuần lễ, nhằm tránh “Transformers 5”...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- pay method -->
+<div class="spacer"></div>
+
+<div class="home-wrapper _curtain" style=" opacity: 1; width: 100%;">
+<section class="app-showcase-section section-bg merge-bg">
+  <div class="container">
+    <div class="content">
+      <div class="pcol">
+        <div class="__head">
+          CHỌN THỨ ƯA THÍCH<br> <span class="__pwac">CHỈ VỚI MỘT CLICK</span>
+        </div>
+        <div class="__content">
+          Với ví online việc thanh toán cho bộ phim yêu thích của bạn sẽ trở lên dễ dàng hơn bao giờ hết. Đăng ký ngay, chỉ với một click.
+        </div>
+        <div class="facilities">
+          <ul>
+            <li>
+              <span class="__img">
+                <img src="img/logo/icon-click.png">
+              </span>
+              <br>
+              <span class="__text">One-Click<br>ĐỂ THANH TOÁN</span>
+            </li>
+            <li>
+              <span class="__img">
+                <img src="img/logo/icon-instant.png">
+              </span>
+              <br>
+              <span class="__text">HOÀN TIỀN<br>DỄ DÀNG</span>
+            </li>
+            <li>
+              <span class="__img">
+                <img src="img/logo/icon-safe.png">
+              </span>
+              <br>
+              <span class="__text">100%<br>AN TOÀN&amp;BẢO MẬT</span>
+            </li>
+            <li class="__img">
+              <span class="__img">
+                <img src="img/logo/icon-quick.png">
+              </span>
+              <br>
+              <span class="__text">NHANH HƠN<br>CÁC THẺ KHÁC</span>
+            </li>
+          </ul>
+          <div class="__action"><a id="btnWalletHome" class="pbtn _cuatro" href="#">ĐĂNG KÝ NGAY</a></div>
+        </div>
+      </div>
+      <div class="  ad-image" style="visibility: visible; animation-name: ;">
+        <img data-src="img/logo/wallet-img.png" alt="MyWallet" src="img/logo/wallet-img.png" class="wallet-img">
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!--footer -->
+<footer id="footer" style="margin-top: 100px">
+    <div class="innerFooter">
+        <div class="footerInfo">
+            <ul style="padding:0;">
+                <li class="colorGreen">
+                    <h4>
+                        <strong>MONTHLY ACTIVE USER</strong>
+                        <span>SỐ LƯỢNG NGƯỜI DÙNG HÀNG THÁNG</span>
+                    </h4>
+                    <span class="numInfo">1.8M</span>
+                </li>
+                <li class="colorYellow">
+                    <h4>
+                        <strong>TOTAL TICKETS SALE</strong>
+                        <span>SỐ VÉ ĐÃ BÁN</span>
+                    </h4>
+                    <span class="numInfo">500K+</span>
+                </li>
+            </ul>
+        </div>
+        <div class="footerCont">
+            <div class="listMenuFooter">
+                <ul>
+                    <li><a href="#" title="Ứng dụng di động" >Ứng dụng
+                        di động</a>
+                    </li>
+                    <li><a href="#" title="Thỏa thuận sử dụng">Thỏa
+                        thuận sử dụng</a>
+                    </li>
+                    <li><a href="#" title="Quy chế hoạt động">Quy chế
+                        hoạt động</a>
+                    </li>
+                    <li><a href="#" title="Chính sách bảo mật">Chính sách bảo mật</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" title="Lịch chiếu">Lịch chiếu</a></li>
+                    <li><a href="#" title="Phim">Phim</a></li>
+                    <li><a href="#" title="Rạp">Rạp</a></li>
+                    <li><a href="#" title="Khuyến mãi">Khuyến mãi</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" title="Góc điện ảnh">Blog điện ảnh</a>
+                    </li>
+                    <li><a href="#" title="Review phim">Review phim</a></li>
+                    <li><a href="#" title="">Phiên bản di động</a></li>
+                    <li><a href="#" title="FAQ">FAQ</a></li>
+                </ul>
+                <br class="spacer"/>
+            </div>
+        </div>
+    </div>
+    <br class="spacer"/>
+    <hr style="background-color:#778899">
+    <div class="innerFooter-end">
+        <div class="footerContBot">
+            <div class="footerDetail">
+                <h4>PTTTQPHIM - SẢN PHẨM CỦA CÔNG TY CP Blook Buster</h4>
+                <p>Địa chỉ: E3 Đại Học Công Nghệ 144 Xuân Thủy Cầu Giấy <br>Số ĐKKD: 0305418909, cấp lần
+                    đầu ngày 29/09/2016 – Sở KHĐT TP. HN cấp
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+
+<!-- js cua slider tren top -->
+<script type="text/javascript" src="js/jssor.slider-21.1.5.mini.js"></script>
+<script src="js/top-slider.js"> </script>
+
+<!-- js cua trinh phat video -->
+<script type="text/javascript" src="html5lightbox/html5lightbox.js"></script>
+
+<!--  js cua bootstrap-->
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+<!-- js cua login -->
+<script type="text/javascript" src="js/login.js"></script>
+
+
+<!-- khong biet la js gi -->
+<script src="js/modernizr.custom.js"></script>
+<script src="js/toucheffects.js"></script>
+
+
+<!-- js chinh responsive -->
+<script type="text/javascript">
+var currentWidth=$(window).width();
+$(document).ready(function(){
+  function onSizeChange(){
+    var width = $(window).width();
+    // console.log(width);
+    if (width <= 600){
+      $('nav').removeClass('navbar-fixed-top');
+      $('nav').removeClass('header-bar-fixed');
+      $('body').css("margin-top","0");
+      $('dropdown').addClass('hidden');
+      $('.search-container').css({"visibility": "hidden"});
+      $('#header-search').removeClass("hidden");
+    }else{
+      $('nav').addClass('navbar-fixed-top');
+      $('nav').addClass('header-bar-fixed');
+      $('body').css("margin-top","50px");
+      $('dropdown').removeClass('hidden');
+      $('.search-container').css({ "visibility" : "visible", "width":"45%","margin-left": "27.5%"});
+      $('#header-search').addClass("hidden");
+    }
+
+     var verticalPos =$('#jssor_1').height()/4*3;
+     var searchHigh =$('#jssor_1').height()/8;
+     $('.search-container').css({"top": verticalPos+"px","height" : searchHigh +"px"});
+
+    window.setTimeout(onSizeChange,30);
+  }
+  onSizeChange();
+
+  var cw = $('.Img').width();
+  var s = cw*0.8;
+  $('figure').css({'width':s+'px'});
+  var card_h = $(".card").height() + 40;
+  $(".blog").css({'height':card_h+'px'});
+});
+</script>
+</html>
